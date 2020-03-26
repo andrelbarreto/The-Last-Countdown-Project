@@ -36,16 +36,18 @@ export default class Control extends Component {
                                     style={{
                                        // position: 'absolute',
                                         backgroundColor: '#FF0000',
-                                        fontSize: 0.7,
+                                        fontSize: 0.9,
                                         fontWeight: '400',
-                                        layoutOrigin: [8.5, -0.1],
+                                        width: 5,
+                                        length: 5,
+                                        layoutOrigin: [9.5, 0.1],
                                         paddingLeft: 0.2,
                                         paddingRight: 0.2,
                                         textAlign: 'center',
                                         textAlignVertical: 'center',
                                         transform: [{ translate: [32, 6, 10] }, { rotateY: 90 }],
                                     }}>
-                                    Use control buttons
+                                    Use Control Buttons
                         </Text>
                            // </View>
                         )
