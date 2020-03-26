@@ -38,6 +38,7 @@ export default class Control extends Component {
                                         backgroundColor: '#FF0000',
                                         fontSize: 0.9,
                                         fontWeight: '400',
+                                        fontStyle: "italic",
                                         width: 5,
                                         length: 5,
                                         layoutOrigin: [9.5, 0.1],
