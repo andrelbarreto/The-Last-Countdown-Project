@@ -43,7 +43,7 @@ export default class Control extends Component {
                                         paddingRight: 0.2,
                                         textAlign: 'center',
                                         textAlignVertical: 'center',
-                                        transform: [{ translate: [32, 6, 10] }, { rotateY: -90 }],
+                                        transform: [{ translate: [32, 6, 10] }, { rotateY: 90 }],
                                     }}>
                                     Use control buttons
                         </Text>
