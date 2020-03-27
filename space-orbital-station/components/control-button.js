@@ -36,19 +36,16 @@ export default class Control extends Component {
                                     style={{
                                        // position: 'absolute',
                                         backgroundColor: '#FF0000',
-                                        fontSize: 0.9,
+                                        fontSize: 0.8,
                                         fontWeight: '400',
-                                        fontStyle: "italic",
-                                        width: 5,
-                                        length: 5,
-                                        layoutOrigin: [9.5, 0.1],
+                                        layoutOrigin: [9.5, -0.6],
                                         paddingLeft: 0.2,
                                         paddingRight: 0.2,
                                         textAlign: 'center',
                                         textAlignVertical: 'center',
-                                        transform: [{ translate: [32, 6, 10] }, { rotateY: 90 }],
+                                        transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }],
                                     }}>
-                                    Use Control Buttons
+                                    Use Control Button
                         </Text>
                            // </View>
                         )
@@ -59,13 +56,12 @@ export default class Control extends Component {
                                     position: 'absolute',
                                     width: 5,
                                     height: 5,
-                                    layoutOrigin: [8.5, -0.6],
+                                    layoutOrigin: [8.5, -0.7],
                                     transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }],
                                 }}
                             />
                         )
                     }
-
                 </VrButton>
             </View>
 
