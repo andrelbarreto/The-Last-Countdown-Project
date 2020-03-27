@@ -36,9 +36,9 @@ export default class Control extends Component {
                                     style={{
                                        // position: 'absolute',
                                         backgroundColor: '#FF0000',
-                                        fontSize: 1.2,
+                                        fontSize: 1.1,
                                         fontWeight: '400',
-                                        layoutOrigin: [7.5, -0.6],
+                                        layoutOrigin: [7.0, -0.6],
                                         paddingLeft: 0.2,
                                         paddingRight: -0.2,
                                         textAlign: 'center',
