@@ -1,0 +1,36 @@
+.jumbotron{
+  margin: auto;
+  top: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #291866;
+  border: 15px #da8f35 ;
+  box-shadow: 0 0 10px 12px #da8f35;
+  border-radius: 5rem;
+  color: #da8f35;
+}
+
+.create{
+  margin: 0em;
+}
+
+.patch{
+ display: block;
+ margin: auto;
+}
+
+.btn{
+  background-color: #79bc2c;
+  color: #291866;
+}
+
+
+temp{
+  color: #291866;
+  color: #da8f35;
+  color: #ea080a;
+  color: #79bc2c;
+  color: #add6da;
+  color: #000000;
+  color: #ffffff;
+}
