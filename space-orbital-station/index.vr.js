@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -7,7 +8,8 @@ import {
   View,
 } from 'react-vr';
 
-import Control from './components/control-button'
+import Control from './components/control-button';
+import Control_tip1 from '/components/Control_tip1';
 
 export default class space_orbital_station extends React.Component {
   render() {
@@ -17,9 +19,9 @@ export default class space_orbital_station extends React.Component {
         <Text
           style={{
             backgroundColor: '#000080',
-            fontSize: 0.3,
-            fontWeight: '300',
-            layoutOrigin: [+0.5, 0.5],
+            fontSize: 0.5,
+            fontWeight: '400',
+            layoutOrigin: [0.5, 0.5],
             paddingLeft: 0.2,
             paddingRight: 0.2,
             textAlign: 'center',
@@ -29,6 +31,7 @@ export default class space_orbital_station extends React.Component {
           S. O. S.
         </Text>
         <Control />
+        <Control_tip1 />
       </View>
     );
   }

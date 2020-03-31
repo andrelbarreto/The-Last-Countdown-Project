@@ -19,7 +19,17 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URLnpm || "mongodb://localhost/VR_Data");
+ mongoose.connect(
+    process.env.MONGODB_URL || "mongodb://localhost/VR_Data",
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  },
+  
+  () =>
+    console.log("connected to DB!")
+  );
 
 // Start the API server
 app.listen(PORT, function() {

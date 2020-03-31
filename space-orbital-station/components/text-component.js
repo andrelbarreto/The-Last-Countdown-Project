@@ -1,4 +1,5 @@
-<Text
+
+<Text>
     style={{
      backgroundColor: '#777879',
      fontSize: 0.3,
@@ -11,4 +12,4 @@
      transform: [{ translate: [0, 0, -3] }],
      }}>
   Puzzle 1
-</Text>
+  </Text>
