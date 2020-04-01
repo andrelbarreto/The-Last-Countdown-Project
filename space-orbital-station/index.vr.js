@@ -9,14 +9,17 @@ import {
 } from 'react-vr';
 
 import Control from './components/control-button';
-import Control_tip1 from '/components/Control_tip1';
+import Safety from './components/space_safety';
+import Astronaut from './components/astronaut'
+
+// import Control_tip1 from '/components/Control_tip1';
 
 export default class space_orbital_station extends React.Component {
   render() {
     return (
       <View>
         <Pano source={asset('space2.jpg')}/>
-        <Text
+        {/* <Text
           style={{
             backgroundColor: '#000080',
             fontSize: 0.5,
@@ -29,9 +32,10 @@ export default class space_orbital_station extends React.Component {
             transform: [{translate: [0, 0, -3]}],
           }}>
           S. O. S.
-        </Text>
+        </Text> */}
+        <Safety />
+        <Astronaut />
         <Control />
-        <Control_tip1 />
       </View>
     );
   }
