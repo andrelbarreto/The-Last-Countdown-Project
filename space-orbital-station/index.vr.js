@@ -9,7 +9,7 @@ import {
 } from 'react-vr';
 
 import Control from './components/control-button';
-import Control_tip1 from '/components/Control_tip1';
+// import Control_tip1 from '/components/Control_tip1';
 
 export default class space_orbital_station extends React.Component {
   render() {
@@ -31,7 +31,7 @@ export default class space_orbital_station extends React.Component {
           S. O. S.
         </Text>
         <Control />
-        <Control_tip1 />
+        {/* <Control_tip1 /> */}
       </View>
     );
   }
