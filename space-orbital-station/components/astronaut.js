@@ -48,10 +48,10 @@ export default class Astronaut extends Component {
                                 source={asset('PathPuzzle.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 5,
-                                    height: 3,
+                                    width: 10,
+                                    height: 6,
                                     layoutOrigin: [ 0, 0],
-                                    transform: [{ translate: [12, 10, 10] }, { rotateY: -90 }],
+                                    transform: [{ translate: [12, 10, 10] }, { rotateY: -120 }],
                                 }}
                             />
                         )

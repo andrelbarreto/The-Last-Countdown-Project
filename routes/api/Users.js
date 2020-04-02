@@ -1,85 +1,68 @@
-const mongoose = require('mongoose');
-const passport = require('passport');
-const router = require('express').Router();
-const auth = require('../auth');
-const Users = mongoose.model('Users');
+const express = require('express')
+const router = express.Router()
+const Users = require('../../database/models/users')
+const passport = require('../../passport')
 
-//POST new user route (optional, everyone has access)
-router.post('/', auth.optional, (req, res, next) => {
-  const { body: { user } } = req;
+router.post('/', (req, res) => {
+    console.log('user signup');
 
-  if(!user.email) {
-    return res.status(422).json({
-      errors: {
-        email: 'is required',
-      },
-    });
-  }
+    const { username, password } = req.body
+    // ADD VALIDATION
+    Users.findOne({ username: username }, (err, user) => {
+        if (err) {
+            console.log('Users.js post error: ', err)
+        } else if (user) {
+            res.json({
+                error: `Sorry, already a user with the username: ${username}`
+            })
+        }
+        else {
+            const newUser = new Users({
+                username: username,
+                password: password
+            })
+            newUser.save((err, savedUser) => {
+                if (err) return res.json(err)
+                res.json(savedUser)
+            })
+        }
+    })
+})
 
-  if(!user.password) {
-    return res.status(422).json({
-      errors: {
-        password: 'is required',
-      },
-    });
-  }
-
-  const finalUser = new Users(user);
-
-  finalUser.setPassword(user.password);
-
-  return finalUser.save()
-    .then(() => res.json({ user: finalUser.toAuthJSON() }));
-});
-
-//POST login route (optional, everyone has access)
-router.post('/login', auth.optional, (req, res, next) => {
-  const { body: { user } } = req;
-
-  if(!user.email) {
-    return res.status(422).json({
-      errors: {
-        email: 'is required',
-      },
-    });
-  }
-
-  if(!user.password) {
-    return res.status(422).json({
-      errors: {
-        password: 'is required',
-      },
-    });
-  }
-
-  return passport.authenticate('local', { session: false }, (err, passportUser, info) => {
-    if(err) {
-      return next(err);
+router.post(
+    '/login',
+    function (req, res, next) {
+        console.log('routes/users.js, login, req.body: ');
+        console.log(req.body)
+        next()
+    },
+    passport.authenticate('local'),
+    (req, res) => {
+        console.log('logged in', req.users);
+        var userInfo = {
+            username: req.users.username
+        };
+        res.send(userInfo);
     }
+)
 
-    if(passportUser) {
-      const user = passportUser;
-      user.token = passportUser.generateJWT();
-
-      return res.json({ user: user.toAuthJSON() });
+router.get('/', (req, res, next) => {
+    console.log('===== user!!======')
+    console.log(req.users)
+    if (req.users) {
+        res.json({ users: req.users })
+    } else {
+        res.json({ users: null })
     }
+})
 
-    return status(400).info;
-  })(req, res, next);
-});
+router.post('/logout', (req, res) => {
+    if (req.user) {
+        req.logout()
+        res.send({ msg: 'logging out' })
+    } else {
+        res.send({ msg: 'no user to log out' })
+    }
+})
 
-//GET current route (required, only authenticated users have access)
-router.get('/current', auth.required, (req, res, next) => {
-  const { payload: { id } } = req;
-
-  return Users.findById(id)
-    .then((user) => {
-      if(!user) {
-        return res.sendStatus(400);
-      }
-
-      return res.json({ user: user.toAuthJSON() });
-    });
-});
-
-module.exports = router;
+module.exports = router

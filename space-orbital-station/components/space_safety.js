@@ -37,15 +37,15 @@ export default class Safety extends Component {
                                position: 'absolute',
                                width: 5,
                                height:11,
-                               layoutOrigin: [ -1.5, 0],
-                               transform: [{ translate: [22, -10, 10] }, { rotateY: -120}],
+                               layoutOrigin: [ -5.7, 2.2],
+                               transform: [{ translate: [23, -10, 10] }, { rotateY: -220}],
                            }}
                        />
                            // </View>
                         )
                         : (
                             <Image
-                                source={asset('control-button-tip.jpg')}
+                                source={asset('MIR_tip2.jpg')}
                                 style={{
                                     position: 'absolute',
                                     width: 5,

@@ -4,6 +4,7 @@ import {
     View,
     Text,
     Image,
+    Sound,
     asset
 } from 'react-vr'
 
@@ -28,7 +29,11 @@ export default class Control extends Component {
     render() {
         return (
             <View>
-                <VrButton onClick={this.toggleDisplayText}>
+                <VrButton onClick={this.toggleDisplayText}
+                
+                onClickSound={{ wav: asset('mic.wav') }}
+                
+                >
                     {this.state.displayingControlText === true ?
                         (
                            // <View>
