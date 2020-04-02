@@ -6,7 +6,7 @@ import {
     asset
 } from 'react-vr'
 
-export default class Astronaut extends Component {
+export default class Wrench extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -32,26 +32,26 @@ export default class Astronaut extends Component {
                         (
                            // <View>
                            <Image
-                           source={asset('astronaut.png')}
+                           source={asset('wrench.png')}
                            style={{
                                position: 'absolute',
                                width: 5,
                                height:11,
-                               layoutOrigin: [ 0, 0],
-                               transform: [{ translate: [12, 10, 10] }, { rotateY: -90}],
+                               layoutOrigin: [ -15, 0],
+                               transform: [{ translate: [-45, 25, 10] }, { rotateY: -120}],
                            }}
                        />
                            // </View>
                         )
                         : (
                             <Image
-                                source={asset('PathPuzzle.jpg')}
+                                source={asset('MIR-tip1.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 10,
-                                    height: 6,
-                                    layoutOrigin: [ 0, 0],
-                                    transform: [{ translate: [12, 10, 10] }, { rotateY: -120 }],
+                                    width: 5,
+                                    height: 3,
+                                    layoutOrigin: [ -15, 0],
+                                    transform: [{ translate: [-45, 25, 10] }, { rotateY: -120 }],
                                 }}
                             />
                         )
@@ -65,4 +65,4 @@ export default class Astronaut extends Component {
 }
 
 
-module.exports = Astronaut
+module.exports = Wrench
