@@ -38,7 +38,7 @@ export default class Safety extends Component {
                                width: 5,
                                height:11,
                                layoutOrigin: [ -5.7, 2.2],
-                               transform: [{ translate: [23, -10, 10] }, { rotateY: -220}],
+                               transform: [{ translate: [27, -12, -10] }, { rotateY: -220}],
                            }}
                        />
                            // </View>
