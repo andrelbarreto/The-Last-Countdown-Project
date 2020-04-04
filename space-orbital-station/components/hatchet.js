@@ -58,10 +58,14 @@ export default class Door extends Component {
                                 source={asset('Hatch-closed.png')}
                                 style={{
                                     position: 'absolute',
-                                    width: 20,
-                                    height: 18.5,
-                                    layoutOrigin: [25, -27],
-                                    transform: [{ translate: [39, 14, 10] }, { rotateY: -80  }],
+                                    width: 280,
+                                    height: 280,
+                                    layoutOrigin: [0, 0],
+                                    transform: [
+                                        {translate: [-400, -200, -360]},
+                                        {rotateX: -90},
+                                        {rotateY: 15}
+                                    ]             
                                 }}
                             />
                         )
