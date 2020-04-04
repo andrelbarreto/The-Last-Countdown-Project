@@ -35,10 +35,14 @@ export default class Safety extends Component {
                            source={asset('space-safety.jpg')}
                            style={{
                                position: 'absolute',
-                               width: 5,
-                               height:11,
-                               layoutOrigin: [ -5.7, 2.2],
-                               transform: [{ translate: [27, -12, -10] }, { rotateY: -220}],
+                               width: 17.75,
+                               height:83.125,
+                               layoutOrigin: [ 0, 0],
+                               transform: [
+                                   { translate: [115, 30, -25]},
+                                   { rotateY: 325},
+                                   { rotateX: 5},
+                               ]
                            }}
                        />
                            // </View>
@@ -63,6 +67,4 @@ export default class Safety extends Component {
         )
     }
 }
-
-
 module.exports = Safety
