@@ -30,26 +30,31 @@ export default class Astronaut extends Component {
                 <VrButton onClick={this.toggleDisplayText}>
                     {this.state.displayingControlText === true ?
                         (
-                           // <View>
+                           <View>
                            <Image
                            source={asset('astronaut.png')}
                            style={{
                                position: 'absolute',
-                               width: 5,
-                               height:11,
+                               width: 91.3,
+                               height:116.3,
                                layoutOrigin: [ 0, 0],
-                               transform: [{ translate: [12, 10, 10] }, { rotateY: -90}],
+                               transform: [
+                                   { translate: [-20, 165, -1000]}, 
+                                   { rotateY: 180},
+                                   { rotateX: 45}
+                                
+                            ]
                            }}
                        />
-                           // </View>
+                           </View>
                         )
                         : (
                             <Image
                                 source={asset('PathPuzzle.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 10,
-                                    height: 6,
+                                    width: 10.15,
+                                    height: 13.5,
                                     layoutOrigin: [ 0, 0],
                                     transform: [{ translate: [12, 10, 10] }, { rotateY: -120 }],
                                 }}
