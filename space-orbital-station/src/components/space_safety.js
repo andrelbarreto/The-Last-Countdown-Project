@@ -44,20 +44,23 @@ export default class Safety extends Component {
                                    { rotateX: 5},
                                ]
                            }}
-                       />
+                            />
                            // </View>
                         )
                         : (
                             <Image
-                                source={asset('MIR_tip2.jpg')}
+                            source={asset('MIR_tip2.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 5,
-                                    height: 3,
-                                    layoutOrigin: [ -1.5, 0],
-                                    transform: [{ translate: [22, -10, 10] }, { rotateY: -120 }],
+                                    width: 43.25,
+                                    height: 22,
+                                    layoutOrigin: [ 0, 0],
+                                    transform: [{ translate: [ -200, -25, 100]}, 
+                                    { rotateY: 140 },
+                                    { rotateX: -20},
+                                ]
                                 }}
-                            />
+                       />
                         )
                     }
 
