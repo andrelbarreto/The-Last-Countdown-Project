@@ -59,10 +59,15 @@ export default class Control extends Component {
                                 source={asset('control.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 5,
-                                    height: 5,
-                                    layoutOrigin: [8.5, -0.7],
-                                    transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }],
+                                    width: 200,
+                                    height: 200,
+                                    layoutOrigin: [0, 0],
+                                    transform: [
+                                        { translate: [-400, 100, 375]},
+                                        { rotateY: 140 },
+                                        { rotateX: -10},
+                                        { rotateZ: 0}
+                                    ],
                                 }}
                             />
                         )
