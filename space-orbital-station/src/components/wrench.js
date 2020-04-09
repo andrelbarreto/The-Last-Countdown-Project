@@ -35,25 +35,34 @@ export default class Wrench extends Component {
                            source={asset('wrench.png')}
                            style={{
                                position: 'absolute',
-                               width: 5,
-                               height:11,
-                               layoutOrigin: [ -15, 0],
-                               transform: [{ translate: [-45, 25, 10] }, { rotateY: -120}],
-                           }}
-                       />
+                               width: 300,
+                               height: 172.2,
+                               layoutOrigin: [ 0, 0],
+                               transform: [
+                                   { translate: [ 500, 150, 500]}, 
+                                   { rotateY: -120},
+                                   { rotateZ: -150},
+                                   
+                                ],
+                           }} 
+                            />
                            // </View>
                         )
                         : (
                             <Image
-                                source={asset('MIR-tip1.jpg')}
+                          source={asset('MIR-tip1.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 5,
-                                    height: 3,
-                                    layoutOrigin: [ -15, 0],
-                                    transform: [{ translate: [-45, 25, 10] }, { rotateY: -120 }],
+                                    width: 106.5,
+                                    height: 79.5,
+                                    layoutOrigin: [ 0, 0],
+                                    transform: [
+                                        { translate: [-400, 50, 200]}, 
+                                        { rotateY: 140 },
+                                        { rotateX: -15},
+                                    ],
                                 }}
-                            />
+                       />
                         )
                     }
 
@@ -66,3 +75,4 @@ export default class Wrench extends Component {
 
 
 module.exports = Wrench
+

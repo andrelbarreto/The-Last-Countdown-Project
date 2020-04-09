@@ -1,37 +1,37 @@
 {
-  "name": "vr_server",
+  "name": "vrlauncher",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "private": true,
+  "main": "./server/server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'space-orbital-station/*'\" \"npm run client\"",
-    "client": "cd space-orbital-station && npm run start",
-    "seed": "node scripts/seedDB.js",
-    "install": "cd space-orbital-station && npm install",
-    "build": "cd space-orbital-station && npm run build",
-    "heroku-postbuild": "npm run build"
+    "start:prod": "node ../server/server.js",
+    "start:dev": "concurrently -k \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build"
   },
-  "author": "",
+  "author": "Bryan Jerger",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
-  },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "bcryptjs": "^2.4.3",
-    "connect-mongo": "^3.2.0",
-    "crypto": "^1.0.1",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.16.3",
-    "express-jwt": "^5.3.1",
-    "express-session": "^1.17.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "if-env": "^1.0.4",
-    "mongoose": "^5.9.7",
-    "morgan": "^1.10.0",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
-  }
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "spectre.css": "^0.5.8"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.5"
+  },
+  "proxy": "http://localhost:8080"
 }
