@@ -31,23 +31,25 @@ export default class Control_tip1 extends Component {
                 <VrButton onClick={this.toggleDisplayText}>
                     {this.state.displayingControlText === true ?
                         (
-                           // <View>
+                            <View>
                                 <Text
                                     style={{
-                                       // position: 'absolute',
-                                        backgroundColor: '#FF0000',
-                                        fontSize: 0.5,
-                                        fontWeight: '100',
-                                        layoutOrigin: [18.5, -0.6],
-                                        paddingLeft: 0.2,
-                                        paddingRight: 0.2,
-                                        textAlign: 'center',
-                                        textAlignVertical: 'center',
-                                        transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }],
-                                    }}>
-                                    I
+                                     backgroundColor: '#C0C0C0',
+                                    color : '#000000',
+                                    fontSize: 8,
+                                    fontWeight: '300',
+                                    layoutOrigin: [0, 0],
+                                     paddingLeft: 0.1,
+                                    paddingRight: 0.1,
+                                    textAlign: 'center',
+                                    textAlignVertical: 'center',
+                                    transform: [{ translate: [ -280, -6, 100]}, 
+                                    { rotateY: 140 },
+                                    { rotateX: -20} ]
+                                   }}>  
+                                    Cool down sequence
                         </Text>
-                           // </View>
+                            </View>
                         )
                         : (
                             <Image
@@ -57,7 +59,7 @@ export default class Control_tip1 extends Component {
                                     width: 4,
                                     height: 2,
                                     layoutOrigin: [18.5, -0.6],
-                                    transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }],
+                                    transform: [{ translate: [42, 9, 10] }, { rotateY: 140 }],
                                 }}
                             />
                         )

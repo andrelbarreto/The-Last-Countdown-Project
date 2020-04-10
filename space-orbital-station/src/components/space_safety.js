@@ -3,6 +3,7 @@ import {
     VrButton,
     View,
     Image,
+    Text,
     asset
 } from 'react-vr'
 
@@ -48,6 +49,7 @@ export default class Safety extends Component {
                            // </View>
                         )
                         : (
+                            <View>
                             <Image
                             source={asset('MIR_tip2.jpg')}
                                 style={{
@@ -60,12 +62,31 @@ export default class Safety extends Component {
                                     { rotateX: -20},
                                 ]
                                 }}
-                       />
+                            />
+                            <Text
+                             style={{
+                                 position: 'absolute',
+                                 backgroundColor: '#C0C0C0',
+                                 color : '#000000',
+                                 fontSize: 3,
+                                 fontWeight: '300',
+                                 layoutOrigin: [0, 0],
+                                 paddingLeft: 0.2,
+                                 paddingRight: 0.2,
+                                 textAlign: 'center',
+                                 textAlignVertical: 'center',
+                                 transform: [{ translate: [ -201, -3, 100]}, 
+                                    { rotateY: 140 },
+                                    { rotateX: -20} ]
+                             }}>
+                             Wrong buttons, but 
+                             Seek close to  them.
+                             </Text>
+                             </View>
                         )
                     }
-
-                </VrButton>
-          //  </View>
+                   </VrButton>
+           //</View> 
 
         )
     }
