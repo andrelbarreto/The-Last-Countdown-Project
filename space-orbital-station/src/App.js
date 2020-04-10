@@ -9,6 +9,7 @@ import {
   VrButton,
   Sound,
   Model,
+  Video,
   View,
 } from 'react-vr';
 
@@ -18,7 +19,7 @@ import Astronaut from './components/astronaut';
 import Wrench from './components/wrench';
 import ControlTip from './components/Controltip';
 import Door from './components/hatchet'
-
+//import VideoElement from '/components/Videoelement'
 
 const DEFAULT_ANIMATION_BUTTON_RADIUS = 50;
 const DEFAULT_ANIMATION_BUTTON_SIZE = 0.05;
@@ -58,14 +59,19 @@ export default class space_orbital_station extends React.Component {
       
       <View>
         <Pano source={asset(this.state.background)}/>
-
+         <Video 
+            style = {{height:6, width:3}}
+            source = {{url: 'alert.mp4' }}
+            playerState = {this.state.playerState}
+            />
+            
         <Sound
             loop={true}
             volume={0.6}
             source={{ mp3: asset(this.state.sound) }}
         />
         
-        <VrButton onClick={this.changeScene.bind(this)}>
+        {/* <VrButton onClick={this.changeScene.bind(this)}>
             <Text
                  style={{
                   backgroundColor: '#FF0000',
@@ -82,9 +88,22 @@ export default class space_orbital_station extends React.Component {
                                           ]}} 
             >Click right HERE!!!</Text>
             
+          </VrButton> */}
             
-            </VrButton>
+            {/* <View style={{
+             flex: 1,
+             width: 8,
+            flexDirection: 'column',
+             alignItems: 'stretch',
+             backgroundColor: '#333333',
+            layoutOrigin: [0.5, 0.5],
+             transform: [{translate: [0, 0, -5]}]
+            }}> */}
+                    
+          {/* </View> */}
+
             {this.renderItems()}
+
         {/* < Door/> */}
         {/* <Safety /> */}
         {/* <Astronaut />
