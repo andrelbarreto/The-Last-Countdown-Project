@@ -35,13 +35,14 @@ export default class Astronaut extends Component {
                            source={asset('astronaut.png')}
                            style={{
                                position: 'absolute',
-                               width: 91.3,
-                               height:116.3,
+                               width: 66.5577,
+                               height: 84.7827,
                                layoutOrigin: [ 0, 0],
                                transform: [
-                                   { translate: [-20, 165, -1000]}, 
+                                   { translate: [-20, 110, -600]}, 
                                    { rotateY: 180},
-                                   { rotateX: 45}
+                                   { rotateX: 45},
+                                   { rotateX: -50},
                                 
                             ]
                            }}
@@ -53,10 +54,10 @@ export default class Astronaut extends Component {
                                 source={asset('PathPuzzle.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 10.15,
-                                    height: 13.5,
+                                    width: 507.625,
+                                    height: 677.25,
                                     layoutOrigin: [ 0, 0],
-                                    transform: [{ translate: [12, 10, 10] }, { rotateY: -120 }],
+                                    transform: [{ translate: [ 200, 200, -600] }, { rotateY: -40 }],
                                 }}
                             />
                         )

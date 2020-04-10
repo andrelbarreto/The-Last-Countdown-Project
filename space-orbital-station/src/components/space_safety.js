@@ -3,6 +3,7 @@ import {
     VrButton,
     View,
     Image,
+    Text,
     asset
 } from 'react-vr'
 
@@ -44,25 +45,48 @@ export default class Safety extends Component {
                                    { rotateX: 5},
                                ]
                            }}
-                       />
+                            />
                            // </View>
                         )
                         : (
+                            <View>
                             <Image
-                                source={asset('MIR_tip2.jpg')}
+                            source={asset('MIR_tip2.jpg')}
                                 style={{
                                     position: 'absolute',
-                                    width: 5,
-                                    height: 3,
-                                    layoutOrigin: [ -1.5, 0],
-                                    transform: [{ translate: [22, -10, 10] }, { rotateY: -120 }],
+                                    width: 43.25,
+                                    height: 22,
+                                    layoutOrigin: [ 0, 0],
+                                    transform: [{ translate: [ -200, -25, 100]}, 
+                                    { rotateY: 140 },
+                                    { rotateX: -20},
+                                ]
                                 }}
                             />
+                            <Text
+                             style={{
+                                 position: 'absolute',
+                                 backgroundColor: '#C0C0C0',
+                                 color : '#000000',
+                                 fontSize: 3,
+                                 fontWeight: '300',
+                                 layoutOrigin: [0, 0],
+                                 paddingLeft: 0.2,
+                                 paddingRight: 0.2,
+                                 textAlign: 'center',
+                                 textAlignVertical: 'center',
+                                 transform: [{ translate: [ -201, -3, 100]}, 
+                                    { rotateY: 140 },
+                                    { rotateX: -20} ]
+                             }}>
+                             Wrong buttons, but 
+                             Seek close to  them.
+                             </Text>
+                             </View>
                         )
                     }
-
-                </VrButton>
-          //  </View>
+                   </VrButton>
+           //</View> 
 
         )
     }

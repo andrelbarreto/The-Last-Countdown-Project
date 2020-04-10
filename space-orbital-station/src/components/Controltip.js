@@ -34,18 +34,19 @@ export default class ControlTip extends Component {
                            // <View>
                                 <Text
                                     style={{
-                                       // position: 'absolute',
-                                        backgroundColor: '#FF0000',
-                                        fontSize: 0.5,
-                                        fontWeight: '100',
+                                       position: 'absolute',
+                                       backgroundColor: '#C0C0C0',
+                                       color : '#000000',
+                                       fontSize: 3,
+                                       fontWeight : 200,
                                         layoutOrigin: [18.5, -0.6],
                                         paddingLeft: 0.2,
                                         paddingRight: 0.2,
                                         textAlign: 'center',
                                         textAlignVertical: 'center',
-                                        transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }],
+                                        transform: [{ translate: [32, 6, 20] }, { rotateY: 140 }, {rotateX : -30}],
                                     }}>
-                                    I
+                                    1 of 2 is K?
                         </Text>
                            // </View>
                         )
@@ -57,7 +58,7 @@ export default class ControlTip extends Component {
                                     width: 4,
                                     height: 2,
                                     layoutOrigin: [18.5, -0.6],
-                                    transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }],
+                                    transform: [{ translate: [32, 6, 10] }, { rotateY: 140 }, {rotateX: -32}],
                                 }}
                             />
                         )
