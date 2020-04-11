@@ -3,7 +3,7 @@ Final Project for Northwestern University Coding Bootcamp
 
 [This is a link to the github.](https://github.com/andrelbarreto/The-Last-Countdown-Project.git)
 
-[This is the  link to the functional app.](https://Heroku/)
+[This is the  link to the functional app. launcher](https://peaceful-tundra-51918.herokuapp.com/)
 
 ## Table of Contents
 * [User Story](#user-story)
@@ -42,6 +42,7 @@ See the layout of the app below.
 
 ## Technologies Used
 * React VR: Building out virtual reality app
+* Three.JS & WEBVR  : for VR app compatibility with browsers
 * React/React JS: Web framework
 * MongoDB Atlas/Mongoose: Storing user data
 * Node
@@ -54,7 +55,7 @@ See the layout of the app below.
 * JSX
 
 ## Team Matrix
-* Andre Barreto - Team Lead
+* Andre Barreto - Project Manager
 * Bryan Jerger
 * Nathan Huber
 * Shannon Ervin
