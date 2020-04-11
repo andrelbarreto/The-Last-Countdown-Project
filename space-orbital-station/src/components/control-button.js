@@ -71,7 +71,7 @@ export default class Control extends Component {
                                         textAlignVertical: 'center',
                                         transform: [{ translate: [-390, 95, 375] }, { rotateY: 145 }],
                                     }}>
-                                    Use Control Button
+                                    Use Control Panel
                         </Text>
                            // </View>
                         )
@@ -84,6 +84,9 @@ export default class Control extends Component {
                             //     overflow: 'visible',
                             // }} onClick={this.get3DPoint()} onClickSound={{ mp3: asset('console_alarm.mp3') }}
                             // >
+
+ //------------Here is where I set the positioning of the Control Panel  -N8 ------------------------ 
+
                             <Image
                                 source={asset('control.jpg')}
                                 style={{

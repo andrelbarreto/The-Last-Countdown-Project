@@ -29,6 +29,9 @@ export default class Astronaut extends Component {
            // <View>
                 <VrButton onClick={this.toggleDisplayText}>
                     {this.state.displayingControlText === true ?
+
+//------------Here is where I set the positioning of the astronaut  -N8 ------------------------ 
+
                         (
                            <View>
                            <Image
@@ -48,6 +51,9 @@ export default class Astronaut extends Component {
                            }}
                        />
                            </View>
+
+//------------Here is where I set the positioning of the PathPuzzle  -N8 ------------------------ 
+
                         )
                         : (
                             <Image

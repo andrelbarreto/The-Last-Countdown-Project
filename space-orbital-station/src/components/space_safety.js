@@ -32,6 +32,9 @@ export default class Safety extends Component {
                     {this.state.displayingControlText === true ?
                         (
                            // <View>
+
+ //------------Here is where I set the positioning of the Safety Card  -N8 ------------------------ 
+
                            <Image
                            source={asset('space-safety.jpg')}
                            style={{
@@ -49,6 +52,8 @@ export default class Safety extends Component {
                            // </View>
                         )
                         : (
+
+//------------Here is where I set the positioning of the MIR_tip2.jpg  -N8 ------------------------                             
                             <View>
                             <Image
                             source={asset('MIR_tip2.jpg')}

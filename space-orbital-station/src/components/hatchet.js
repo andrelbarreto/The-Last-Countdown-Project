@@ -61,6 +61,9 @@ export default class Door extends Component {
 
                         )
                         : (
+
+//------------Here is where I set the positioning of the closed hatch door  -N8 ------------------------       
+                      
                             <Image
                                 source={asset('Hatch-closed.png')}
                                 style={{

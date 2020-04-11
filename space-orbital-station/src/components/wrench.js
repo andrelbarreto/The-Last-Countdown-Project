@@ -31,6 +31,9 @@ export default class Wrench extends Component {
                     {this.state.displayingControlText === true ?
                         (
                            // <View>
+
+ //------------Here is where I set the positioning of the wrench  -N8 ------------------------        
+
                            <Image
                            source={asset('wrench.png')}
                            style={{
@@ -49,6 +52,8 @@ export default class Wrench extends Component {
                            // </View>
                         )
                         : (
+
+//------------Here is where I set the positioning of the MIR-tip1.jpg  -N8 ------------------------                             
                             <Image
                           source={asset('MIR-tip1.jpg')}
                                 style={{
